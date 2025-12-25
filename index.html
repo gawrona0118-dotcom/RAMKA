@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagranie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Kliknij, aby odtworzyć nagranie</h1>
+    <p>(odtworzy się tylko raz)</p>
+  </div>
+
+<audio id="audio" src="nagranie.mp3"></audio>
+  <script>
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("audio");
+      audio.play();
+    }, { once: true });
+  </script>
+
+</body>
+</html>
